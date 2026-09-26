@@ -26,7 +26,6 @@
            1. CSS VARIABLES & THEME SETUP
            ========================================================================== */
         :root {
-            /* Dark Theme Colors (Default) */
             --bg-primary: #0a0d14;
             --bg-secondary: #121824;
             --bg-tertiary: #1a2233;
@@ -98,7 +97,6 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -134,7 +132,6 @@
             position: relative;
         }
 
-        /* Typography Helper Classes */
         .gradient-text {
             background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
             -webkit-background-clip: text;
@@ -192,7 +189,6 @@
             100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
 
-        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -231,7 +227,6 @@
             transform: translateY(-2px);
         }
 
-        /* Scroll Progress Bar */
         #scroll-progress {
             position: fixed;
             top: 0;
@@ -464,20 +459,16 @@
             overflow: hidden;
             border: 1px solid var(--border-color);
             box-shadow: var(--card-shadow);
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .about-image-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .about-image-frame::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, var(--bg-primary) 0%, transparent 40%);
-            z-index: 1;
+        .about-image-frame i {
+            font-size: 6rem;
+            color: var(--accent-blue);
+            opacity: 0.6;
         }
 
         .about-text p {
@@ -635,7 +626,6 @@
             line-height: 1.6;
         }
 
-        /* Pipeline Workflow */
         .pipeline-title {
             text-align: center;
             font-size: 1.8rem;
@@ -929,7 +919,6 @@
             margin-top: 0.5rem;
         }
 
-        /* Reference Card */
         .reference-card {
             background: var(--bg-glass-card);
             border: 1px solid var(--border-color);
@@ -1026,7 +1015,6 @@
             font-size: 0.9rem;
         }
 
-        /* Back to Top Button */
         #back-to-top {
             position: fixed;
             bottom: 2rem;
@@ -1113,7 +1101,6 @@
 </head>
 <body>
 
-    <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
 
     <!-- Navigation Bar -->
@@ -1185,7 +1172,7 @@
             <div class="about-grid">
                 <div class="about-image-container">
                     <div class="about-image-frame">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Md. Ashraf Bin Alam" id="profile-img">
+                        <i class="fa-solid fa-user-gear"></i>
                     </div>
                 </div>
                 <div class="about-text">
@@ -1193,7 +1180,7 @@
                         I am a research-oriented AI/ML Engineer with extensive experience in Computer Vision, Deep Learning, Explainable AI (XAI), and Medical Image Analysis[cite: 1]. My primary research focus revolves around building trustworthy, interpretable, and practical AI systems that solve high-stakes challenges[cite: 1].
                     </p>
                     <p>
-                        Currently serving as a Research Assistant at the <strong>DIU ML and NLP Research Lab</strong>, I contribute to end-to-end research pipelines—from multi-slice dataset curation and architectural prototyping to rigorous model evaluation and manuscript publication[cite: 1]. 
+                        Currently serving as a Research Assistant at the <strong>DIU ML and NLP Research Lab</strong>, I contribute to end-to-end research pipelines—from multi-slice dataset curation and architectural prototyping to rigorous model evaluation and manuscript publication[cite: 1].
                     </p>
                     <p>
                         While my foundational work targets visual representation learning and interpretable medical decision-making, I am actively expanding into Natural Language Processing, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Multimodal AI systems[cite: 1].
@@ -1329,7 +1316,6 @@
                 </div>
             </div>
 
-            <!-- Pipeline Workflow -->
             <h3 class="pipeline-title">Research Methodology & Workflow</h3>
             <div class="pipeline-flow">
                 <div class="pipeline-step">
@@ -1441,7 +1427,6 @@
             </div>
 
             <div class="publication-list">
-                <!-- Published -->
                 <div class="pub-card">
                     <div class="pub-header">
                         <h3 class="pub-title">DeepHist: A Deep Learning Approach for Multi-Class Lung Cancer Classification from Histopathological Images</h3>
@@ -1469,7 +1454,6 @@
                     <p class="pub-venue">International Conference on Artificial Intelligence for Sustainable ...[cite: 1]</p>
                 </div>
 
-                <!-- Accepted / Forthcoming -->
                 <div class="pub-card">
                     <div class="pub-header">
                         <h3 class="pub-title">Deep Learning-Based Brain Tumor Classification from Multi-Slice MRI: A Comparison of CNN Architectures</h3>
@@ -1488,7 +1472,6 @@
                     <p class="pub-venue">15th International Conference on Applications and Techniques in Information Security (ATIS 2025), Australia[cite: 1]</p>
                 </div>
 
-                <!-- Under Review -->
                 <div class="pub-card">
                     <div class="pub-header">
                         <h3 class="pub-title">Graph-Based Relational Learning on Deep Visual Embeddings for Medicinal Plant Recognition</h3>
@@ -1519,7 +1502,6 @@
             </div>
 
             <div class="timeline">
-                <!-- Research Assistant -->
                 <div class="timeline-item">
                     <div class="timeline-icon"><i class="fa-solid fa-flask"></i></div>
                     <div class="timeline-card">
@@ -1536,7 +1518,6 @@
                     </div>
                 </div>
 
-                <!-- Education -->
                 <div class="timeline-item" id="education">
                     <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                     <div class="timeline-card">
@@ -1561,7 +1542,6 @@
                 </div>
             </div>
 
-            <!-- Academic Reference -->
             <div class="reference-card">
                 <h4 style="font-size: 1.1rem; color: var(--accent-blue); margin-bottom: 0.5rem;"><i class="fa-solid fa-user-tie"></i> Academic Reference</h4>
                 <p><strong>Md Sadekur Rahman</strong> — Assistant Professor & Convener of Division of Research[cite: 1]</p>
@@ -1609,7 +1589,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Form integration placeholder: Connect this to Formspree or EmailJS.');">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent placeholder! To connect directly, email me at alam23105101187@diu.edu.bd');">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" class="form-input" placeholder="e.g., Prof. John Doe" required>
@@ -1636,14 +1616,9 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <!-- ==========================================================================
-       JAVASCRIPT LOGIC
-       ========================================================================== -->
     <script>
-        // 1. Interactive Theme Toggle
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = themeToggleBtn.querySelector('i');
 
@@ -1658,7 +1633,6 @@
             }
         });
 
-        // 2. Typewriter Effect
         const phrases = [
             "AI/ML Engineer",
             "Computer Vision Researcher",
@@ -1695,7 +1669,6 @@
         }
         document.addEventListener('DOMContentLoaded', type);
 
-        // 3. Navbar Scrolling & Progress
         const navbar = document.getElementById('navbar');
         const scrollProgress = document.getElementById('scroll-progress');
         const backToTopBtn = document.getElementById('back-to-top');
@@ -1704,10 +1677,8 @@
             const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
             const currentScroll = window.scrollY;
             
-            // Progress Bar Width
             scrollProgress.style.width = (currentScroll / totalScroll) * 100 + '%';
 
-            // Navbar Shrink Effect
             if (currentScroll > 50) {
                 navbar.classList.add('scrolled');
                 backToTopBtn.classList.add('visible');
@@ -1721,7 +1692,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // 4. Project Filter Functionality
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
 
@@ -1743,7 +1713,6 @@
             });
         });
 
-        // 5. Lightweight Canvas Particle Effect
         const canvas = document.getElementById('canvas-container');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -1807,7 +1776,6 @@
         }
         animateCanvas();
 
-        // 6. Mobile Menu Toggle
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const navLinks = document.getElementById('nav-links');
 
