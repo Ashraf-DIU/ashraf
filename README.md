@@ -1,4 +1,4 @@
-# Md. Ashraf Bin Alam — Portfolio Website
+# Md. Ashraf Bin Alam - Portfolio Website
 
 Personal academic and professional portfolio website for Md. Ashraf Bin Alam (AI/ML Engineer & Researcher).
 
