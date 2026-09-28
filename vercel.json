@@ -1,13 +1,9 @@
 {
-  "cleanUrls": true,
-  "routes": [
+  "version": 2,
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/ashraf.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/",
+      "destination": "/ashraf.html"
     }
   ]
 }
